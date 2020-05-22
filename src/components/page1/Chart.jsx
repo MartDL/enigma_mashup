@@ -5,7 +5,7 @@ import { QlikContext } from '../../context/QlikContext';
 import LineChart from './buildChart';
 
 
-const Chart = () => {
+const Chart = (props) => {
     const { app } = useContext(QlikContext)
     const [data, setData] = useState([])
 
@@ -35,7 +35,7 @@ const Chart = () => {
 
     return ( 
         <>
-        <h1>Page 1</h1>
+        <h1>{props.title}</h1>
         {data.length > 0 && <LineChart data={data} /> }
         <br/>
       </>

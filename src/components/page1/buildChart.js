@@ -26,7 +26,7 @@ const useResizeObserver = ref => {
 }
 
 function LineChart({ data }) {
-    console.log(data)
+
  
     const myPath = data.map(d => d.measures[0].value)
     const labels = data.map(d => d.dimensions[0].value) // xAxis labels
@@ -34,7 +34,7 @@ function LineChart({ data }) {
     const svgRef = useRef()
     const wrapperRef = useRef()
     const dimensions = useResizeObserver(wrapperRef)
-    console.log(dimensions)
+ 
 
 
     useEffect(() => {

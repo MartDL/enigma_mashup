@@ -8,10 +8,10 @@ const QlikProvider = ({ children }) => {
     const [app, setApp] = useState(null)
 
     useEffect(() => {
-        openSession().then((app) => {
-            setApp(app)
+        openSession().then((qDoc) => {
+            setApp(qDoc)
         })
-        console.log('app', openSession)
+        console.log('qDoc', openSession)
         return openSession
     }, [])
 
